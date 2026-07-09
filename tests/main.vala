@@ -7,6 +7,8 @@ int main (string[] args) {
     Test.init (ref args);
 
     ValaFoundation.Testcases.register_test_suite<AppTests.ExampleTest> ();
+    ValaFoundation.Testcases.register_test_suite<AppTests.MemoryCacheTest> ();
+    ValaFoundation.Testcases.register_test_suite<AppTests.FilesystemCacheTest> ();
 
 
     return Test.run ();
