@@ -42,7 +42,8 @@ jobs:
             valac \
             pkg-config \
             libglib2.0-dev \
-            libgee-0.8-dev
+            libgee-0.8-dev \
+            libjson-glib-dev
 
       - name: Configure release build
         run: meson setup build-release --buildtype=release
