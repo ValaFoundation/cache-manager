@@ -12,6 +12,7 @@ Vala cache library with a shared cache API and multiple storage backends.
 - [Test](#test)
 - [Release artifacts](#release-artifacts)
 - [Use generated library in other projects](#use-generated-library-in-other-projects)
+- [Install via Vamposer](#install-via-vamposer)
 - [Dependencies](#dependencies)
 - [License](#license)
 
@@ -184,6 +185,30 @@ curl -sSfL https://raw.githubusercontent.com/ValaFoundation/cache-manager/master
 ```
 
 This helper downloads release artifacts (or builds from source) and prepares local `vapi/`, `lib/`, and `include/` folders plus reusable Meson variables.
+
+## Install via [Vamposer](https://github.com/ValaFoundation/vamposer)
+
+In your consumer project root:
+
+```sh
+vamposer require ValaFoundation/cache-manager master
+vamposer install
+```
+
+Then include generated Vamposer dependencies in your `meson.build`:
+
+```meson
+subdir('vamposer')
+
+executable('my-app',
+	sources,
+	dependencies: [
+		vamposer_deps
+	]
+)
+```
+
+You can also use a fixed tag or commit instead of `master`.
 
 ## Dependencies
 

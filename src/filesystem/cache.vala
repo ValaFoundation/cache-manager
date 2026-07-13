@@ -42,7 +42,7 @@ namespace ValaFoundation.CacheManager.Filesystem {
                 }
             }
 
-            CacheItemInterface[] out = new CacheItemInterface[result.size];
+            CacheItemInterface[] out = new CacheItem[result.size];
             int i = 0;
             foreach (CacheItemInterface item in result) {
                 out[i++] = item;
